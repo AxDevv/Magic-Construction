@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:netherite_block"
+    },
+    "E": {
+      "item": "minecraft:end_crystal"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    },
+    "W": {
+      "item": "magicconstruction:engineer_wand"
+    }
+  },
+  "pattern": [
+    "ENB",
+    "NWN",
+    "BSE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicconstruction:architect_wand"
+  }
+}

@@ -1,0 +1,11 @@
+// 1.21.1	2025-12-01T14:32:28.7674935	Magic Construction item models
+0fc1a7a59bc1538150e2afc88505b79c5167b128 assets/magicconstruction/models/item/architect_wand.json
+9dad7c7010edfc82fe67d3a3233b09f84ae743c1 assets/magicconstruction/models/item/block_pouch_1.json
+dc2ebccb0da0ec80c18ef6f33125657b93991768 assets/magicconstruction/models/item/block_pouch_2.json
+c4f7e7b89449ed160eabd1df70ee637fa1c17a60 assets/magicconstruction/models/item/block_pouch_3.json
+64e9fd8873ea0666de28a8ea77947ad0dc6a2ea4 assets/magicconstruction/models/item/block_pouch_4.json
+52f8285dae42f2f4b029ab8d0c9d9eb86a609c2c assets/magicconstruction/models/item/builder_wand.json
+b185e378e14659bc647e4ec925fe71dc33862c73 assets/magicconstruction/models/item/cobble_wand.json
+559d373e52240d3415e6e5a1f19ec5275c4d5e9a assets/magicconstruction/models/item/engineer_wand.json
+14ba7e34395d6fc9641bbc3ac9900e8de95b49ed assets/magicconstruction/models/item/repair_rune_major.json
+4f01905344f6af170e7bf4d41f54e2cc18e79a27 assets/magicconstruction/models/item/repair_rune_minor.json

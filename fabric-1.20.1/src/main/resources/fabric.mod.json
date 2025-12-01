@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "magicconstruction",
+  "version": "${version}",
+  "name": "Magic Construction",
+  "description": "Building wands to place multiple blocks at once with Block Pouches and Repair Runes!",
+  "authors": ["Ax_Dev"],
+  "contact": {
+    "homepage": "https://github.com/AxDevv/Magic-Construction",
+    "sources": "https://github.com/AxDevv/Magic-Construction",
+    "issues": "https://github.com/AxDevv/Magic-Construction/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/magicconstruction/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["axdev.magicconstruction.MagicConstruction"],
+    "client": ["axdev.magicconstruction.MagicConstructionClient"]
+  },
+  "mixins": ["magicconstruction.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "magicconstruction:item/repair_rune_minor"
+  }
+}

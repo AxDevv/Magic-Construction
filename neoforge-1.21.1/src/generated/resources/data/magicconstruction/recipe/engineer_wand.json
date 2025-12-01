@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:diamond_block"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "W": {
+      "item": "magicconstruction:builder_wand"
+    }
+  },
+  "pattern": [
+    "EDB",
+    "DWD",
+    "BOE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicconstruction:engineer_wand"
+  }
+}

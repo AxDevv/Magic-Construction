@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "minecraft:iron_block"
+    },
+    "C": {
+      "item": "minecraft:chain"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "P": {
+      "item": "magicconstruction:block_pouch_1"
+    }
+  },
+  "pattern": [
+    "CIC",
+    "BPB",
+    "IBI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "magicconstruction:block_pouch_2"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "E": {
+      "item": "minecraft:emerald_block"
+    },
+    "M": {
+      "item": "magicconstruction:repair_rune_minor"
+    },
+    "N": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "DND",
+    "MSM",
+    "ENE"
+  ],
+  "result": {
+    "count": 1,
+    "item": "magicconstruction:repair_rune_major"
+  }
+}

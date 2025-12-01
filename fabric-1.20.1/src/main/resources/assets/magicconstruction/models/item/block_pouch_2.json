@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "magicconstruction:item/block_pouch_2"
+  }
+}

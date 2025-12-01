@@ -1,0 +1,31 @@
+{
+  "itemGroup.magicconstruction": "Magic Construction",
+
+  "item.magicconstruction.cobble_wand": "Cobble Wand",
+  "item.magicconstruction.builder_wand": "Builder's Wand",
+  "item.magicconstruction.engineer_wand": "Engineer's Wand",
+  "item.magicconstruction.architect_wand": "Architect's Wand",
+  "item.magicconstruction.block_pouch_1": "Block Pouch (Basic)",
+  "item.magicconstruction.block_pouch_2": "Block Pouch (Iron)",
+  "item.magicconstruction.block_pouch_3": "Block Pouch (Gold)",
+  "item.magicconstruction.block_pouch_4": "Block Pouch (Diamond)",
+  "item.magicconstruction.repair_rune_minor": "Minor Repair Rune",
+  "item.magicconstruction.repair_rune_major": "Major Repair Rune",
+
+  "magicconstruction.tooltip.blocks": "Max. %d blocks",
+  "magicconstruction.tooltip.repair_rune": "Repairs %d%% durability in anvil",
+  "magicconstruction.tooltip.pouch": "Block Pouch: %d/%d",
+  "magicconstruction.tooltip.shift_pouch": "[Shift+Right Click] Open Pouch",
+  "magicconstruction.tooltip.pouch_capacity": "Capacity: %d blocks",
+  "magicconstruction.tooltip.pouch_combine": "Combine with a wand in crafting table",
+  "magicconstruction.tooltip.and_more": "  ...and %d more",
+
+  "magicconstruction.gui.block_pouch": "Block Pouch",
+  "magicconstruction.message.undo_empty": "Nothing to undo",
+  "magicconstruction.message.undo_confirm": "Click again to confirm undo",
+  "magicconstruction.message.undo_success": "Undone %d blocks",
+  "magicconstruction.message.undo_partial": "Undone %d blocks (%d skipped - missing/changed)",
+  "magicconstruction.message.undo_failed": "Undo failed - blocks were removed or changed",
+
+  "stat.magicconstruction.use_wand": "Blocks placed using Wand"
+}
