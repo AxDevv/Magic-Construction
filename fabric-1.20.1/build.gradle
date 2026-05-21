@@ -47,6 +47,15 @@ jar {
     }
 }
 
+task copyToTarget(type: Copy) {
+    dependsOn remapJar
+    from remapJar.archiveFile
+    into file('C:/Users/twitc/Desktop/Magic construction mod/Magic-Construction/target')
+    rename { "magicconstruction-fabric-1.20.1-${version}.jar" }
+}
+
+build.finalizedBy('copyToTarget')
+
 publishing {
     publications {
         mavenJava(MavenPublication) {

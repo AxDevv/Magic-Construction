@@ -10,18 +10,19 @@ public class ModKeyBindings {
 
     public static KeyBinding UNDO;
     public static KeyBinding OPEN_POUCH;
+
     public static void register() {
         UNDO = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.magicconstruction.undo",
-                InputUtil.Type.MOUSE,
-                GLFW.GLFW_MOUSE_BUTTON_LEFT,
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_Z,
                 CATEGORY
         ));
 
         OPEN_POUCH = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.magicconstruction.open_pouch",
-                InputUtil.Type.MOUSE,
-                GLFW.GLFW_MOUSE_BUTTON_RIGHT,
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_C,
                 CATEGORY
         ));
     }

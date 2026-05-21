@@ -15,7 +15,7 @@ public class ClientEvents {
     }
 
     @SubscribeEvent
-    public void onMouseInput(InputEvent.MouseButton.Pre event) {
+    public void onKeyInput(InputEvent.Key event) {
         Minecraft mc = Minecraft.getInstance();
         Player player = mc.player;
         if(player == null) return;
@@ -25,19 +25,11 @@ public class ClientEvents {
         if(!isModifierDown()) return;
 
         if(event.getAction() == 1) {
-            if(ModKeyBindings.UNDO.matchesMouse(event.getButton())) {
+            if(ModKeyBindings.UNDO.matches(event.getKey(), event.getScanCode())) {
                 ModMessages.sendToServer(new PacketUndo());
-                event.setCanceled(true);
+                return;
             }
         }
-    }
-
-    @SubscribeEvent
-    public void onKeyInput(InputEvent.Key event) {
-        Minecraft mc = Minecraft.getInstance();
-        Player player = mc.player;
-        if(player == null) return;
-        if(WandUtil.holdingWand(player) == null) return;
 
         boolean modifierDown = isModifierDown();
         if(lastModifierState != modifierDown) {

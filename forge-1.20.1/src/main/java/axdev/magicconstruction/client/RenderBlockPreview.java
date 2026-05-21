@@ -2,6 +2,7 @@ package axdev.magicconstruction.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.minecraft.client.Camera;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.RenderHighlightEvent;
@@ -71,7 +73,7 @@ public class RenderBlockPreview {
         if(blocks == null || blocks.isEmpty()) return;
 
         renderBlocks(event.getPoseStack(), event.getMultiBufferSource(), event.getPartialTick(),
-                     player, blocks, colorR, colorG, colorB);
+                     event.getCamera(), blocks, colorR, colorG, colorB);
 
         event.setCanceled(true);
     }
@@ -89,11 +91,14 @@ public class RenderBlockPreview {
         PoseStack poseStack = event.getPoseStack();
         MultiBufferSource.BufferSource buffer = mc.renderBuffers().bufferSource();
 
+        Camera camera = new Camera();
+        camera.setup(mc.level, mc.player, false, false, event.getPartialTick());
+
         if(undoBlocks != null && !undoBlocks.isEmpty()) {
             if(isUndoPreviewExpired()) {
                 clearUndoBlocks();
             } else {
-                renderBlocks(poseStack, buffer, event.getPartialTick(), player, undoBlocks, 1F, 0F, 0F);
+                renderBlocks(poseStack, buffer, event.getPartialTick(), camera, undoBlocks, 1F, 0F, 0F);
                 buffer.endBatch();
                 return;
             }
@@ -119,21 +124,19 @@ public class RenderBlockPreview {
         Set<BlockPos> blocks = ledgeWandJob.getBlockPositions();
         if(blocks == null || blocks.isEmpty()) return;
 
-        renderBlocks(poseStack, buffer, event.getPartialTick(), player, blocks, 0.2F, 0.6F, 1.0F);
+        renderBlocks(poseStack, buffer, event.getPartialTick(), camera, blocks, 0.2F, 0.6F, 1.0F);
 
         buffer.endBatch();
     }
 
     private void renderBlocks(PoseStack ms, MultiBufferSource buffer, float partialTicks,
-                              Player player, Set<BlockPos> blocks, float colorR, float colorG, float colorB) {
+                              Camera camera, Set<BlockPos> blocks, float colorR, float colorG, float colorB) {
         VertexConsumer lineBuilder = buffer.getBuffer(RenderType.LINES);
 
-        double d0 = player.xOld + (player.getX() - player.xOld) * partialTicks;
-        double d1 = player.yOld + player.getEyeHeight() + (player.getY() - player.yOld) * partialTicks;
-        double d2 = player.zOld + (player.getZ() - player.zOld) * partialTicks;
+        Vec3 camPos = camera.getPosition();
 
         for(BlockPos block : blocks) {
-            AABB aabb = new AABB(block).move(-d0, -d1, -d2);
+            AABB aabb = new AABB(block).move(-camPos.x, -camPos.y, -camPos.z);
             LevelRenderer.renderLineBox(ms, lineBuilder, aabb, colorR, colorG, colorB, 0.4F);
         }
     }

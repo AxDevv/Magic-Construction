@@ -106,6 +106,15 @@ tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
 
+task copyToTarget(type: Copy) {
+    dependsOn jar
+    from jar.archiveFile
+    into file('C:/Users/twitc/Desktop/Magic construction mod/Magic-Construction/target')
+    rename { "magicconstruction-neoforge-${version}.jar" }
+}
+
+build.finalizedBy('copyToTarget')
+
 idea {
     module {
         downloadSources = true

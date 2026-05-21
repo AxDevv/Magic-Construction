@@ -11,16 +11,16 @@ public class ModKeyBindings {
     public static final KeyMapping UNDO = new KeyMapping(
             "key.magicconstruction.undo",
             KeyConflictContext.IN_GAME,
-            InputConstants.Type.MOUSE,
-            GLFW.GLFW_MOUSE_BUTTON_LEFT,
+            InputConstants.Type.KEYSYM,
+            GLFW.GLFW_KEY_Z,
             CATEGORY
     );
 
     public static final KeyMapping OPEN_POUCH = new KeyMapping(
             "key.magicconstruction.open_pouch",
             KeyConflictContext.IN_GAME,
-            InputConstants.Type.MOUSE,
-            GLFW.GLFW_MOUSE_BUTTON_RIGHT,
+            InputConstants.Type.KEYSYM,
+            GLFW.GLFW_KEY_C,
             CATEGORY
     );
 
